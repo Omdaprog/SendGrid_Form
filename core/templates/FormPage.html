@@ -1,0 +1,55 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <form class="appointment-form" action="" method="POST">
+                {% csrf_token %}
+                <h2>withdraw funds form</h2>
+                <div class="form-group-1">
+                    
+                    <input type="text" name="name"  placeholder="Your Name" required />
+                    <input type="email" name="email"  placeholder="Your Email" required />
+                    
+                </div>
+                <div class="form-group-2">
+                    <h3>Email address you wish paypal payment to be sent.</h3>
+                    <input type="email" name="email1" placeholder="Email of your Paypal Payment" required />
+                </div>
+                <div style="display: flex;">
+                    <p style="color: black; ">Amount of money :</p>
+                    <input class="amount" style="width: 13%; margin-left: 20px; margin-top: 10px;" type="number" name="money" min="25.00" step="0.01" max="2500" value="25.00" required/>
+                </div>
+                
+
+                <div class="form-check">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the  <a href="#" class="term-service">Terms and Conditions</a></label>
+                </div>
+                <div class="form-submit">
+                    <input type="submit"  class="submit" value="Request an appointment" />
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
