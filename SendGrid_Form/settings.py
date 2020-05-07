@@ -125,7 +125,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-SENDGRID_API_KEY = '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'
+SENDGRID_API_KEY = ''
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_SANDBOX_MODE_IN_DEBUG=False
 
